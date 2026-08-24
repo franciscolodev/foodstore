@@ -5,11 +5,13 @@ export default defineConfig({
     rollupOptions: {
       input: {
         index: 'index.html',
+        login: 'src/pages/auth/login/login.html',
+        registro: 'src/pages/auth/registro/registro.html',
         storeHome: 'src/pages/store/home/home.html',
         storeCart: 'src/pages/store/cart/cart.html',
         productDetail: 'src/pages/store/productDetail/productDetail.html',
         clientOrders: 'src/pages/client/orders/orders.html',
-        adminHome: 'src/pages/admin/home/home.html', // Ruta de administración
+        adminHome: 'src/pages/admin/home/home.html',
       },
     },
   },
