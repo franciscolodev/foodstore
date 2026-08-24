@@ -45,7 +45,7 @@
     "precio": 3800,
     "descripcion": "Mozzarella, salsa de tomate y orégano",
     "stock": 25,
-    "imagen": "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&crop=center&w=500&h=500&q=85",
+    "imagen": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&crop=center&w=500&h=500&q=85",
     "disponible": true,
     "categoria": { "id": 2, "nombre": "Pizzas", "descripcion": "Pizzas al horno de barro" }
   },
@@ -55,7 +55,7 @@
     "precio": 4500,
     "descripcion": "Mozzarella, rodajas de tomate, ajo, aceitunas y albahaca",
     "stock": 25,
-    "imagen": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&crop=center&w=500&h=500&q=85",
+    "imagen": "https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?auto=format&fit=crop&crop=center&w=500&h=500&q=85",
     "disponible": true,
     "categoria": { "id": 2, "nombre": "Pizzas", "descripcion": "Pizzas al horno de barro" }
   },
@@ -65,7 +65,7 @@
     "precio": 4800,
     "descripcion": "Mozzarella, cebolla caramelizada, jamón y aceitunas",
     "stock": 20,
-    "imagen": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&crop=center&w=500&h=500&q=85",
+    "imagen": "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&crop=center&w=500&h=500&q=85",
     "disponible": true,
     "categoria": { "id": 2, "nombre": "Pizzas", "descripcion": "Pizzas al horno de barro" }
   },
@@ -85,7 +85,7 @@
     "precio": 1200,
     "descripcion": "Carne picada, cebolla, huevo duro, aceitunas y especias",
     "stock": 100,
-    "imagen": "https://images.unsplash.com/photo-1628294895950-9805252327bc?auto=format&fit=crop&crop=center&w=500&h=500&q=85",
+    "imagen": "https://images.unsplash.com/photo-1644365771746-81cf86c8f85f?auto=format&fit=crop&crop=center&w=500&h=500&q=85",
     "disponible": true,
     "categoria": { "id": 3, "nombre": "Empanadas", "descripcion": "Empanadas caseras horneadas" }
   },
@@ -95,7 +95,7 @@
     "precio": 1200,
     "descripcion": "Pollo desmenuzado, cebolla, morrón y crema",
     "stock": 80,
-    "imagen": "https://images.unsplash.com/photo-1608039829572-78524f79c4c7?auto=format&fit=crop&crop=center&w=500&h=500&q=85",
+    "imagen": "https://images.unsplash.com/photo-1619895092538-128341789043?auto=format&fit=crop&crop=center&w=500&h=500&q=85",
     "disponible": true,
     "categoria": { "id": 3, "nombre": "Empanadas", "descripcion": "Empanadas caseras horneadas" }
   },
@@ -105,7 +105,7 @@
     "precio": 1100,
     "descripcion": "Jamón cocido y mozzarella",
     "stock": 90,
-    "imagen": "https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?auto=format&fit=crop&crop=center&w=500&h=500&q=85",
+    "imagen": "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&crop=center&w=500&h=500&q=85",
     "disponible": false,
     "categoria": { "id": 3, "nombre": "Empanadas", "descripcion": "Empanadas caseras horneadas" }
   },
@@ -115,7 +115,7 @@
     "precio": 1100,
     "descripcion": "Espinaca, acelga, ricota y nuez moscada",
     "stock": 60,
-    "imagen": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&crop=center&w=500&h=500&q=85",
+    "imagen": "https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?auto=format&fit=crop&crop=center&w=500&h=500&q=85",
     "disponible": true,
     "categoria": { "id": 3, "nombre": "Empanadas", "descripcion": "Empanadas caseras horneadas" }
   },
@@ -185,7 +185,7 @@
     "precio": 2800,
     "descripcion": "Aros de cebolla empanizados, servidos con salsa barbacoa",
     "stock": 40,
-    "imagen": "https://images.unsplash.com/photo-1561758033-d89a9ad46330?auto=format&fit=crop&crop=center&w=500&h=500&q=85",
+    "imagen": "https://images.unsplash.com/photo-1639024471285-05c28591bd01?auto=format&fit=crop&crop=center&w=500&h=500&q=85",
     "disponible": true,
     "categoria": { "id": 5, "nombre": "Papas Fritas", "descripcion": "Acompañamientos crujientes" }
   }
