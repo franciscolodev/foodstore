@@ -1,7 +1,7 @@
 # FoodStore - Backend
 
 * **Asignatura:** Programación III
-* **Alumno:** Francisco López (39.327.419)
+* **Alumno:** Francisco López
 * **Institución:** Universidad Tecnológica Nacional (UTN)
 
 ---
@@ -32,11 +32,6 @@ Este módulo constituye el núcleo de persistencia y lógica transaccional del e
 ### Centro de Reportes Analíticos (JPQL Avanzado)
 * **HU-16 (Reporte de Facturación Agrupada):** Uso de funciones de agregación (`SUM`, `GROUP BY`) y `JOIN` para auditar el total gastado por cada cliente.
 * **HU-17 (Top Clientes Premium):** Uso de subconsultas dinámicas en JPA para aislar y listar los clientes cuyas compras superan el promedio aritmético general de la tienda.
-
----
-
-## 🎬 Demostración en Video
-* **Enlace al Video del Backend:** [ENLACE VIDEO]
 
 ---
 
