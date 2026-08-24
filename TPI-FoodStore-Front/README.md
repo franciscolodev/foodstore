@@ -1,12 +1,7 @@
 # FoodStore - Interfaz de Usuario / Frontend
--Alumno: Francisco López (39.327.419)
+-Alumno: Francisco López
 -Materia: Programación III (UTN)
 -Institución: Universidad Tecnológica Nacional (UTN)
-
----
-
-## 🎬 Demostración en Video
-* **Enlace al Video:** https://youtu.be/VJnYeCPFdwc
 
 ---
 
