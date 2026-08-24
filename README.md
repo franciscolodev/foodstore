@@ -1,8 +1,9 @@
-🍔 ##FoodStore
--A full-stack food ordering platform developed as a project for Programming III at Universidad Tecnológica Nacional (UTN).
+🍔FoodStore
+
+-A full-stack food ordering platform developed as a project for Programming III at Universidad Tecnológica Nacional (UTN). 
 -The project was built as an end-to-end application, covering the entire development process from the frontend to the backend and database integration.
 
-🛠️ ##Technologies
+🛠️Technologies
 HTML5
 CSS3
 TypeScript
