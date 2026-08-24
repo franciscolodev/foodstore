@@ -36,8 +36,8 @@ Permite la gestión ágil del catálogo por parte de los administradores y la si
 
 ## ⚙️ Instrucciones de Inicialización
 1. Clonar el repositorio e ingresar a la carpeta del Frontend.
-2. Ejecutar `npm install` en la terminal para instalar todas las dependencias del stack.
+2. Ejecutar `pnpm install` en la terminal para instalar todas las dependencias del stack.
 3. Configurar el archivo de variables de entorno para apuntar a la URL del servidor Backend local.
 4. Levantar el entorno de desarrollo local con el comando:
    ```bash
-   npm run dev
+   pnpm run dev
