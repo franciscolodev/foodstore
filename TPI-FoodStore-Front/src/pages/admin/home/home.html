@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodStore - Panel de Administración</title>
+    <link rel="stylesheet" href="../../../style.css">
+    <style>
+        .layout-admin { display: flex; min-height: 100vh; }
+        .sidebar-admin { width: 260px; background-color: #1b382b; color: white; padding: 30px 20px; display: flex; flex-direction: column; gap: 25px; }
+        .sidebar-admin h3 { margin: 0; font-size: 1.2rem; border-bottom: 1px solid #142a20; padding-bottom: 15px; }
+        .sidebar-admin ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
+        .sidebar-admin li { padding: 12px 15px; border-radius: 8px; cursor: pointer; font-weight: 500; font-size: 0.95rem; transition: background 0.2s; }
+        .sidebar-admin li:hover, .sidebar-admin li.active { background-color: #142a20; font-weight: bold; }
+        .btn-logout { margin-top: auto; background-color: #ef4444; color: white; border: none; padding: 10px; border-radius: 8px; cursor: pointer; font-weight: bold; }
+        
+        .contenido-admin { flex-grow: 1; padding: 40px; background-color: #f4f6f5; overflow-y: auto; }
+        .grid-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 40px; }
+        .tarjeta-stat { background: white; border-radius: 12px; border: 1px solid #e4e7eb; padding: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.01); }
+        .tarjeta-stat h5 { margin: 0; color: #9ca3af; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px; }
+        .tarjeta-stat .valor { font-size: 1.8rem; font-weight: bold; color: #111827; margin-top: 10px; }
+        
+        .seccion-panel { background: white; border-radius: 16px; border: 1px solid #e4e7eb; padding: 30px; display: none; }
+        .seccion-panel.active { display: block; }
+        
+        .encabezado-panel { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+        .btn-crear { background-color: #1b382b; color: white; border: none; padding: 10px 20px; border-radius: 20px; cursor: pointer; font-weight: bold; font-size: 0.9rem; }
+        
+        table { width: 100%; border-collapse: collapse; text-align: left; }
+        th { padding: 12px; border-bottom: 2px solid #e4e7eb; color: #4b5563; font-size: 0.85rem; text-transform: uppercase; }
+        td { padding: 12px; border-bottom: 1px solid #f4f6f5; vertical-align: middle; font-size: 0.95rem; }
+        
+        .btn-tabla { padding: 6px 12px; border-radius: 6px; border: 1px solid #d1d5db; cursor: pointer; font-size: 0.8rem; font-weight: bold; margin-right: 5px; background: white; }
+        .btn-editar { color: #2563eb; }
+        .btn-eliminar { color: #ef4444; }
+        
+        /* Modal de ABMs genérico */
+        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.4); display: none; align-items: center; justify-content: center; z-index: 2000; }
+        .modal-box { background: white; border-radius: 12px; padding: 30px; max-width: 450px; width: 100%; position: relative; }
+        .form-control { width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 15px; border-radius: 6px; border: 1px solid #d1d5db; box-sizing: border-box; }
+        .modal-acciones { display: flex; justify-content: flex-end; gap: 10px; }
+    </style>
+</head>
+<body>
+
+    <div class="layout-admin">
+        <aside class="sidebar-admin">
+            <h3>🍔 FoodStore Admin</h3>
+            <ul>
+                <li class="active" data-target="panel-dashboard">📊 Dashboard</li>
+                <li data-target="panel-categorias">📁 Categorías</li>
+                <li data-target="panel-productos">🍕 Productos</li>
+                <li data-target="panel-pedidos">📝 Pedidos</li>
+            </ul>
+            <button class="btn-logout" id="logoutButton">Cerrar Sesión</button>
+        </aside>
+
+        <main class="contenido-admin">
+            
+            <section id="panel-dashboard" class="seccion-panel active">
+                <h2>Indicadores de Control</h2>
+                <div class="grid-stats">
+                    <div class="tarjeta-stat">
+                        <h5>Categorías Totales</h5>
+                        <div class="valor" id="stat-categorias">0</div>
+                    </div>
+                    <div class="tarjeta-stat">
+                        <h5>Platos en Menú</h5>
+                        <div class="valor" id="stat-productos">0</div>
+                    </div>
+                    <div class="tarjeta-stat">
+                        <h5>Usuarios Activos</h5>
+                        <div class="valor" id="stat-usuarios">0</div>
+                    </div>
+                    <div class="tarjeta-stat">
+                        <h5>Total Facturado</h5>
+                        <div class="valor" id="stat-facturacion">$0</div>
+                    </div>
+                </div>
+                <h3>¡Bienvenido al Panel de Gestión!</h3>
+                <p style="color: #6b7280; line-height: 1.5;">Utilizá la barra lateral para dar de alta, modificar o realizar bajas lógicas sobre los recursos del sistema en tiempo real.</p>
+            </section>
+
+            <section id="panel-categorias" class="seccion-panel">
+                <div class="encabezado-panel">
+                    <h2>Gestión de Categorías</h2>
+                    <button class="btn-crear" id="btn-nueva-categoria">+ Nueva Categoría</button>
+                </div>
+                <table>
+                    <thead>
+                        <tr><th>ID</th><th>Nombre</th><th>Descripción</th><th>Acciones</th></tr>
+                    </thead>
+                    <tbody id="tbody-categorias"></tbody>
+                </table>
+            </section>
+
+            <section id="panel-productos" class="seccion-panel">
+                <div class="encabezado-panel">
+                    <h2>Gestión de Productos</h2>
+                    <button class="btn-crear" id="btn-nuevo-producto">+ Nuevo Producto</button>
+                </div>
+                <table>
+                    <thead>
+                        <tr><th>ID</th><th>Plato</th><th>Precio</th><th>Stock</th><th>Categoría</th><th>Estado</th><th>Acciones</th></tr>
+                    </thead>
+                    <tbody id="tbody-productos"></tbody>
+                </table>
+            </section>
+
+            <section id="panel-pedidos" class="seccion-panel">
+                <div class="encabezado-panel">
+                    <h2>Órdenes del Sistema</h2>
+                    <select id="filtro-pedidos-admin" class="form-control" style="max-width: 200px; margin: 0;">
+                        <option value="TODOS">Todos los estados</option>
+                        <option value="PENDIENTE">Pendientes</option>
+                        <option value="CONFIRMADO">Confirmados</option>
+                        <option value="TERMINADO">Terminados</option>
+                    </select>
+                </div>
+                <table>
+                    <thead>
+                        <tr><th>ID Orden</th><th>Fecha</th><th>Cliente</th><th>Total</th><th>Estado</th><th>Acciones</th></tr>
+                    </thead>
+                    <tbody id="tbody-pedidos-admin"></tbody>
+                </table>
+            </section>
+
+        </main>
+    </div>
+
+    <div class="modal-overlay" id="modal-admin">
+        <div class="modal-box" id="modal-box-content"></div>
+    </div>
+
+    <script type="module" src="./home.ts"></script>
+</body>
+</html>

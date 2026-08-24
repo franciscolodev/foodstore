@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodStore - Mi Carrito</title>
+    <link rel="stylesheet" href="../../../style.css">
+    <style>
+        .contenedor-carrito { max-width: 1000px; margin: 40px auto; padding: 0 20px; display: flex; gap: 30px; }
+        .seccion-tabla { flex: 2; background: white; border-radius: 16px; border: 1px solid #e4e7eb; padding: 30px; }
+        .seccion-resumen { flex: 1; background: white; border-radius: 16px; border: 1px solid #e4e7eb; padding: 30px; height: fit-content; }
+        
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        th { text-align: left; padding-bottom: 15px; border-bottom: 1px solid #e4e7eb; color: #9ca3af; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px; }
+        td { padding: 20px 0; border-bottom: 1px solid #f4f6f5; vertical-align: middle; }
+        
+        .item-info { display: flex; align-items: center; gap: 15px; }
+        .item-info img { width: 50px; height: 50px; object-fit: contain; border-radius: 50%; }
+        .item-info h5 { margin: 0; font-size: 0.95rem; color: #111827; }
+        
+        .control-cantidad { display: flex; align-items: center; gap: 10px; }
+        .btn-cant { background: #e5e7eb; border: none; width: 28px; height: 28px; border-radius: 50%; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+        .btn-cant:hover { background: #d1d5db; }
+        
+        .btn-eliminar { background: none; border: none; color: #ef4444; cursor: pointer; font-size: 0.85rem; font-weight: 600; }
+        .btn-eliminar:hover { text-decoration: underline; }
+        
+        .resumen-fila { display: flex; justify-content: space-between; margin-bottom: 15px; font-size: 0.95rem; color: #4b5563; }
+        .resumen-total { display: flex; justify-content: space-between; margin-top: 20px; padding-top: 20px; border-top: 1px solid #e4e7eb; font-size: 1.2rem; font-weight: bold; color: #111827; }
+        
+        .campo-checkout { width: 100%; padding: 10px 15px; border-radius: 8px; border: 1px solid #d1d5db; font-size: 0.9rem; outline: none; margin-top: 5px; margin-bottom: 15px; box-sizing: border-box; }
+        
+        .btn-finalizar { background-color: #1b382b; color: white; border: none; width: 100%; padding: 14px; border-radius: 25px; cursor: pointer; font-weight: 600; font-size: 1rem; margin-top: 15px; transition: background 0.2s; }
+        .btn-finalizar:hover { background-color: #142a20; }
+        .btn-vaciar { background: none; border: 1px solid #d1d5db; color: #4b5563; width: 100%; padding: 10px; border-radius: 25px; cursor: pointer; font-weight: 600; font-size: 0.85rem; margin-top: 10px; }
+        .btn-vaciar:hover { background: #f9fafb; }
+    </style>
+</head>
+<body>
+
+    <header class="navbar-store">
+        <div class="brand">🍔FoodStore</div>
+        <nav>
+            <a href="../home/home.html">Catálogo</a>
+            <a href="#" class="active">Carrito <span class="cart-nav-pill" id="nav-total-badge">0</span></a>
+        </nav>
+    </header>
+
+    <div class="contenedor-carrito">
+        <main class="seccion-tabla">
+            <h2>Mi Carrito</h2>
+            <div id="carrito-vacio" style="display: none; text-align: center; padding: 40px; color: #6b7280;">
+                <p>Tu carrito está completamente vacío.</p>
+                <a href="../home/home.html" style="color: #1b382b; font-weight: 600; text-decoration: none;">← Volver al catálogo</a>
+            </div>
+            
+            <div id="tabla-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Precio</th>
+                            <th>Cantidad</th>
+                            <th>Subtotal</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody-items-target">
+                        </tbody>
+                </table>
+            </div>
+        </main>
+
+        <aside class="seccion-resumen" id="resumen-wrapper">
+            <h3>Resumen del Pedido</h3>
+            <div class="resumen-fila" style="margin-top: 20px;">
+                <span>Subtotal</span>
+                <span id="txt-subtotal">$0</span>
+            </div>
+            <div class="resumen-fila">
+                <span>Costo de envío</span>
+                <span style="color: #10b981; font-weight: 600;">Gratis</span>
+            </div>
+            <div class="resumen-total">
+                <span>Total</span>
+                <span id="txt-total">$0</span>
+            </div>
+
+            <hr style="border: 0; border-top: 1px solid #e4e7eb; margin: 25px 0;">
+
+            <h3>Datos de Entrega</h3>
+            <form id="form-checkout">
+                <label for="checkout-telefono" style="font-size: 0.85rem; font-weight: 600; color: #4b5563;">Teléfono de Contacto:</label>
+                <input type="tel" id="checkout-telefono" class="campo-checkout" placeholder="Ej: 3584123456" required>
+
+                <label for="checkout-pago" style="font-size: 0.85rem; font-weight: 600; color: #4b5563;">Forma de Pago:</label>
+                <select id="checkout-pago" class="campo-checkout" required>
+                    <option value="" disabled selected>Seleccioná una opción...</option>
+                    <option value="TARJETA">Tarjeta de Crédito / Débito</option>
+                    <option value="TRANSFERENCIA">Transferencia Bancaria</option>
+                    <option value="EFECTIVO">Efectivo</option>
+                </select>
+
+                <button type="submit" class="btn-finalizar">Confirmar Pedido</button>
+            </form>
+            <button id="btn-vaciar-cart" class="btn-vaciar">Vaciar Carrito</button>
+        </aside>
+    </div>
+
+    <script type="module" src="./cart.ts"></script>
+</body>
+</html>

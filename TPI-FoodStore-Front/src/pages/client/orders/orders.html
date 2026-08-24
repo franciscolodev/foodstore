@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodStore - Mis Pedidos</title>
+    <link rel="stylesheet" href="../../../style.css">
+    <style>
+        .contenedor-pedidos { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+        .titulo-seccion { font-size: 1.6rem; color: #111827; margin-bottom: 25px; font-weight: 700; }
+        
+        .grid-pedidos { display: flex; flex-direction: column; gap: 15px; }
+        .tarjeta-pedido { background: white; border-radius: 12px; border: 1px solid #e4e7eb; padding: 20px; display: flex; justify-content: space-between; align-items: center; }
+        
+        .info-pedido h4 { margin: 0 0 5px 0; font-size: 1.1rem; color: #111827; }
+        .info-pedido p { margin: 0; font-size: 0.85rem; color: #6b7280; }
+        
+        .badge-estado { padding: 5px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: bold; text-transform: uppercase; }
+        .badge-PENDIENTE { background-color: #fef3c7; color: #d97706; }
+        .badge-CONFIRMADO { background-color: #dbeafe; color: #2563eb; }
+        .badge-TERMINADO { background-color: #d1fae5; color: #059669; }
+        .badge-CANCELADO { background-color: #fee2e2; color: #dc2626; }
+        
+        .btn-detalle { background: none; border: 1px solid #d1d5db; padding: 8px 16px; border-radius: 20px; cursor: pointer; font-size: 0.85rem; font-weight: 600; color: #4b5563; }
+        .btn-detalle:hover { background: #f9fafb; color: #111827; }
+
+        /* Modal estricto para desglose solicitado en FHU-06 */
+        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.4); display: none; align-items: center; justify-content: center; z-index: 1000; }
+        .modal-content { background: white; border-radius: 16px; max-width: 500px; width: 100%; padding: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); position: relative; }
+        .modal-close { position: absolute; top: 20px; right: 20px; background: none; border: none; font-size: 1.2rem; cursor: pointer; color: #9ca3af; }
+        
+        .item-modal { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #f4f6f5; font-size: 0.95rem; }
+    </style>
+</head>
+<body>
+
+    <header class="navbar-store">
+        <div class="brand">🍔FoodStore</div>
+        <nav>
+            <a href="../../store/home/home.html">Catálogo</a>
+            <a href="../../store/cart/cart.html">Carrito</a>
+        </nav>
+    </header>
+
+    <main class="contenedor-pedidos">
+        <h2 class="titulo-seccion">Mis Pedidos Realizados</h2>
+        
+        <div id="historial-vacio" style="display: none; text-align: center; padding: 50px; color: #6b7280; background: white; border-radius: 12px; border: 1px solid #e4e7eb;">
+            <h3>Todavía no registrás ningún pedido en tu cuenta.</h3>
+            <p style="margin-top: 10px;">¡Date una vuelta por nuestro catálogo para armar tu primera orden!</p>
+            <a href="../../store/home/home.html" style="color: #1b382b; font-weight: 600; text-decoration: none; display: inline-block; margin-top: 15px;">← Ir al Catálogo</a>
+        </div>
+
+        <div class="grid-pedidos" id="contenedor-pedidos-target">
+            </div>
+    </main>
+
+    <div class="modal-overlay" id="modal-detalle-pedido">
+        <div class="modal-content">
+            <button class="modal-close" id="btn-cerrar-modal">✕</button>
+            <h3 style="margin-top: 0; margin-bottom: 5px;">Detalle del Pedido</h3>
+            <p id="modal-fecha-pago" style="font-size: 0.8rem; color: #9ca3af; margin-bottom: 20px;"></p>
+            
+            <div id="modal-items-target" style="margin-bottom: 20px;">
+                </div>
+            
+            <div style="display: flex; justify-content: space-between; border-top: 2px solid #e4e7eb; padding-top: 15px; font-weight: bold; font-size: 1.1rem;">
+                <span>Monto Total</span>
+                <span id="modal-total-target">$0</span>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="./orders.ts"></script>
+</body>
+</html>

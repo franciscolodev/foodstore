@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Store - Registro</title>
+    <style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    }
+    .form-container {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 350px;
+    }
+    h2 { margin-top: 0; text-align: center; color: #333; }
+    label { display: block; margin: 15px 0 5px; color: #666; }
+    input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    }
+    button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    }
+    button:hover { background-color: #218838; }
+    .link-login { text-align: center; margin-top: 15px; font-size: 14px; }
+    .link-login a { color: #007bff; text-decoration: none; }
+    #reg-mensaje { font-size: 14px; text-align: center; margin-top: 10px; font-weight: bold; }
+</style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Crear cuenta</h2>
+    <form id="form-registro">
+    <label for="reg-email">Email:</label>
+    <input type="email" id="reg-email" required placeholder="ejemplo@correo.com" />
+
+    <label for="reg-password">Contraseña:</label>
+    <input type="password" id="reg-password" required placeholder="Tu contraseña" />
+
+    <button type="submit">Registrarse</button>
+    </form>
+    
+    <p id="reg-mensaje"></p>
+
+    <div class="link-login">
+    ¿Ya tenes cuenta? <a href="../login/login.html">Iniciá sesión acá</a>
+    </div>
+</div>
+
+<script type="module" src="./registro.ts"></script>
+</body>
+</html>
