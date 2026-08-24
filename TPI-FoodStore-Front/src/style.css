@@ -1,53 +1,191 @@
-:root {
---green-navbar: #1b382b;
---green-active: #142a20;
---bg-gray: #f4f6f5;
---border-color: #e4e7eb;
-}
+    :root {
+    --green-navbar: #1b382b;
+    --green-active: #142a20;
+    --bg-gray: #f4f6f5;
+    --border-color: #e4e7eb;
+    }
 
-body {
-font-family: system-ui, -apple-system, sans-serif;
-background-color: var(--bg-gray);
-margin: 0;
-color: #1f2937;
-}
+    body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-gray);
+    margin: 0;
+    color: #1f2937;
+    }
 
+    .navbar-store {
+    background-color: var(--green-navbar);
+    color: white;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
 
-.navbar-store {
-background-color: var(--green-navbar);
-color: white;
-padding: 15px 50px;
-display: flex;
-justify-content: space-between;
-align-items: center;
-}
-.navbar-store .brand { font-size: 1.4rem; font-weight: bold; }
-.navbar-store nav a { color: #cbd5e1; text-decoration: none; margin-left: 20px; font-size: 0.95rem; }
-.navbar-store nav a.active { color: white; font-weight: 600; }
-.cart-nav-pill { background: #e67e22; padding: 2px 8px; border-radius: 12px; font-size: 0.8rem; font-weight: bold; margin-left: 4px; color: white; }
+    .navbar-store .brand { 
+    font-size: 1.4rem; 
+    font-weight: bold; 
+    }
 
-/* Contenedores generales */
-.store-wrapper { display: flex; padding: 30px 50px; gap: 40px; }
-.sidebar-pane { width: 200px; flex-shrink: 0; }
-.sidebar-pane h2 { font-size: 0.8rem; text-transform: uppercase; color: #9ca3af; letter-spacing: 1px; margin-bottom: 15px; }
-.sidebar-pane ul { list-style: none; padding: 0; margin: 0; }
-.sidebar-pane li { padding: 10px 15px; border-radius: 20px; cursor: pointer; color: #4b5563; font-size: 0.95rem; margin-bottom: 5px; }
-.sidebar-pane li.active { background-color: var(--green-navbar); color: white; font-weight: bold; }
+    .navbar-store nav a { 
+    color: #cbd5e1; 
+    text-decoration: none; 
+    margin-left: 20px; 
+    font-size: 0.95rem; 
+    }
 
-.main-content-pane { flex-grow: 1; }
-.round-search { width: 100%; max-width: 320px; padding: 10px 20px; border-radius: 25px; border: 1px solid #d1d5db; font-size: 0.95rem; outline: none; margin-bottom: 30px; }
+    .navbar-store nav a.active { 
+    color: white; 
+    font-weight: 600; 
+    }
 
-/*Tarjetas */
-.grid-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 24px; }
-.product-item-card { background: white; border-radius: 16px; padding: 20px; border: 1px solid var(--border-color); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); display: flex; flex-direction: column; }
-.product-item-card img { max-width: 130px; height: 130px; object-fit: contain; align-self: center; margin-bottom: 15px; }
-.product-item-card .cat-label { font-size: 0.75rem; color: #9ca3af; text-transform: uppercase; font-weight: bold; }
-.product-item-card h4 { margin: 5px 0; font-size: 1.05rem; color: #111827; }
-.product-item-card p { font-size: 0.85rem; color: #6b7280; line-height: 1.4; margin: 0 0 20px 0; flex-grow: 1; }
-.card-bottom-row { display: flex; justify-content: space-between; align-items: center; margin-top: auto; }
-.card-bottom-row .price { font-size: 1.15rem; font-weight: 700; }
+    .cart-nav-pill { 
+    background: #e67e22; 
+    padding: 2px 8px; 
+    border-radius: 12px; 
+    font-size: 0.8rem; 
+    font-weight: bold; 
+    margin-left: 4px; 
+    color: white; 
+    }
 
-.btn-add-item { background-color: var(--green-navbar); color: white; border: none; padding: 8px 16px; border-radius: 20px; cursor: pointer; font-weight: 600; font-size: 0.85rem; }
-.btn-add-item:hover { background-color: var(--green-active); }
-.btn-no-stock { background-color: #e5e7eb; color: #9ca3af; border: none; padding: 8px 16px; border-radius: 20px; cursor: not-allowed; font-size: 0.85rem; }
+    /* Contenedores generales */
+    .store-wrapper { 
+    display: flex; 
+    padding: 30px 50px; 
+    gap: 40px; 
+    }
 
+    .sidebar-pane { 
+    width: 200px; 
+    flex-shrink: 0; 
+    }
+
+    .sidebar-pane h2 { 
+    font-size: 0.8rem; 
+    text-transform: uppercase; 
+    color: #9ca3af; 
+    letter-spacing: 1px; 
+    margin-bottom: 15px; 
+    }
+
+    .sidebar-pane ul { 
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+    }
+
+    .sidebar-pane li { 
+    padding: 10px 15px; 
+    border-radius: 20px; 
+    cursor: pointer; 
+    color: #4b5563; 
+    font-size: 0.95rem; 
+    margin-bottom: 5px; 
+    }
+
+    .sidebar-pane li.active { 
+    background-color: var(--green-navbar); 
+    color: white; 
+    font-weight: bold; 
+    }
+
+    .main-content-pane { 
+    flex-grow: 1; 
+    }
+
+    .round-search { 
+    width: 100%; 
+    max-width: 320px; 
+    padding: 10px 20px; 
+    border-radius: 25px; 
+    border: 1px solid #d1d5db; 
+    font-size: 0.95rem; 
+    outline: none; 
+    margin-bottom: 30px; 
+    }
+
+    /* Tarjetas */
+    .grid-cards { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); 
+    gap: 24px; 
+    }
+
+    .product-item-card { 
+    background: white; 
+    border-radius: 16px; 
+    padding: 20px; 
+    border: 1px solid var(--border-color); 
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); 
+    display: flex; 
+    flex-direction: column; 
+    }
+
+    .product-item-card img { 
+    width: 140px; 
+    height: 140px; 
+    object-fit: cover; 
+    object-position: center; 
+    border-radius: 50%; 
+    align-self: center; 
+    margin-bottom: 15px; 
+    display: block; 
+    }
+
+    .product-item-card .cat-label { 
+    font-size: 0.75rem; 
+    color: #9ca3af; 
+    text-transform: uppercase; 
+    font-weight: bold; 
+    }
+
+    .product-item-card h4 { 
+    margin: 5px 0; 
+    font-size: 1.05rem; 
+    color: #111827; 
+    }
+
+    .product-item-card p { 
+    font-size: 0.85rem; 
+    color: #6b7280; 
+    line-height: 1.4; 
+    margin: 0 0 20px 0; 
+    flex-grow: 1; 
+    }
+
+    .card-bottom-row { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-top: auto; 
+    }
+
+    .card-bottom-row .price { 
+    font-size: 1.15rem; 
+    font-weight: 700; 
+    }
+
+    .btn-add-item { 
+    background-color: var(--green-navbar); 
+    color: white; 
+    border: none; 
+    padding: 8px 16px; 
+    border-radius: 20px; 
+    cursor: pointer; 
+    font-weight: 600; 
+    font-size: 0.85rem; 
+    }
+
+    .btn-add-item:hover { 
+    background-color: var(--green-active); 
+    }
+
+    .btn-no-stock { 
+    background-color: #e5e7eb; 
+    color: #9ca3af; 
+    border: none; 
+    padding: 8px 16px; 
+    border-radius: 20px; 
+    cursor: not-allowed; 
+    font-size: 0.85rem; 
+    }

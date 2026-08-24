@@ -5,7 +5,7 @@
     "precio": 4500,
     "descripcion": "Carne 150g, lechuga, tomate, cebolla morada y mayonesa",
     "stock": 50,
-    "imagen": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80",
+    "imagen": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&crop=center&w=500&h=500&q=85",
     "disponible": true,
     "categoria": { "id": 1, "nombre": "Hamburguesas", "descripcion": "Hamburguesas artesanales con carne premium" }
   },
@@ -15,7 +15,7 @@
     "precio": 6200,
     "descripcion": "Doble carne 150g c/u, cheddar, panceta y salsa barbacoa",
     "stock": 40,
-    "imagen": "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=600&q=80",
+    "imagen": "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&crop=center&w=500&h=500&q=85",
     "disponible": true,
     "categoria": { "id": 1, "nombre": "Hamburguesas", "descripcion": "Hamburguesas artesanales con carne premium" }
   },
@@ -25,7 +25,7 @@
     "precio": 5500,
     "descripcion": "Carne 150g, huevo, jamón, queso, lechuga y tomate",
     "stock": 30,
-    "imagen": "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=600&q=80",
+    "imagen": "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&crop=center&w=500&h=500&q=85",
     "disponible": true,
     "categoria": { "id": 1, "nombre": "Hamburguesas", "descripcion": "Hamburguesas artesanales con carne premium" }
   },
@@ -35,7 +35,7 @@
     "precio": 5000,
     "descripcion": "Medallón de lentejas y quinoa, rúcula, tomato confitado y hummus",
     "stock": 20,
-    "imagen": "https://images.unsplash.com/photo-1520072959219-c595dc870360?auto=format&fit=crop&w=600&q=80",
+    "imagen": "https://images.unsplash.com/photo-1525059696034-4967a8e1dca2?auto=format&fit=crop&crop=center&w=500&h=500&q=85",
     "disponible": true,
     "categoria": { "id": 1, "nombre": "Hamburguesas", "descripcion": "Hamburguesas artesanales con carne premium" }
   },
@@ -45,7 +45,7 @@
     "precio": 3800,
     "descripcion": "Mozzarella, salsa de tomate y orégano",
     "stock": 25,
-    "imagen": "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80",
+    "imagen": "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&crop=center&w=500&h=500&q=85",
     "disponible": true,
     "categoria": { "id": 2, "nombre": "Pizzas", "descripcion": "Pizzas al horno de barro" }
   },
@@ -55,7 +55,7 @@
     "precio": 4500,
     "descripcion": "Mozzarella, rodajas de tomate, ajo, aceitunas y albahaca",
     "stock": 25,
-    "imagen": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=600&q=80",
+    "imagen": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&crop=center&w=500&h=500&q=85",
     "disponible": true,
     "categoria": { "id": 2, "nombre": "Pizzas", "descripcion": "Pizzas al horno de barro" }
   },
@@ -65,7 +65,7 @@
     "precio": 4800,
     "descripcion": "Mozzarella, cebolla caramelizada, jamón y aceitunas",
     "stock": 20,
-    "imagen": "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?auto=format&fit=crop&w=600&q=80",
+    "imagen": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&crop=center&w=500&h=500&q=85",
     "disponible": true,
     "categoria": { "id": 2, "nombre": "Pizzas", "descripcion": "Pizzas al horno de barro" }
   },
@@ -75,7 +75,7 @@
     "precio": 5200,
     "descripcion": "Mozzarella, pepperoni, morrón, cebolla, huevo y aceitunas",
     "stock": 15,
-    "imagen": "https://images.unsplash.com/photo-1628840042765-356cda07504e?auto=format&fit=crop&w=600&q=80",
+    "imagen": "https://images.unsplash.com/photo-1628840042765-356cda07504e?auto=format&fit=crop&crop=center&w=500&h=500&q=85",
     "disponible": true,
     "categoria": { "id": 2, "nombre": "Pizzas", "descripcion": "Pizzas al horno de barro" }
   },
@@ -85,7 +85,7 @@
     "precio": 1200,
     "descripcion": "Carne picada, cebolla, huevo duro, aceitunas y especias",
     "stock": 100,
-    "imagen": "https://images.unsplash.com/photo-1628294895950-9805252327bc?auto=format&fit=crop&w=600&q=80",
+    "imagen": "https://images.unsplash.com/photo-1628294895950-9805252327bc?auto=format&fit=crop&crop=center&w=500&h=500&q=85",
     "disponible": true,
     "categoria": { "id": 3, "nombre": "Empanadas", "descripcion": "Empanadas caseras horneadas" }
   },
@@ -95,7 +95,7 @@
     "precio": 1200,
     "descripcion": "Pollo desmenuzado, cebolla, morrón y crema",
     "stock": 80,
-    "imagen": "https://images.unsplash.com/photo-1608039829572-78524f79c4c7?auto=format&fit=crop&w=600&q=80",
+    "imagen": "https://images.unsplash.com/photo-1608039829572-78524f79c4c7?auto=format&fit=crop&crop=center&w=500&h=500&q=85",
     "disponible": true,
     "categoria": { "id": 3, "nombre": "Empanadas", "descripcion": "Empanadas caseras horneadas" }
   },
@@ -105,7 +105,7 @@
     "precio": 1100,
     "descripcion": "Jamón cocido y mozzarella",
     "stock": 90,
-    "imagen": "https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?auto=format&fit=crop&w=600&q=80",
+    "imagen": "https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?auto=format&fit=crop&crop=center&w=500&h=500&q=85",
     "disponible": false,
     "categoria": { "id": 3, "nombre": "Empanadas", "descripcion": "Empanadas caseras horneadas" }
   },
@@ -115,7 +115,7 @@
     "precio": 1100,
     "descripcion": "Espinaca, acelga, ricota y nuez moscada",
     "stock": 60,
-    "imagen": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=600&q=80",
+    "imagen": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&crop=center&w=500&h=500&q=85",
     "disponible": true,
     "categoria": { "id": 3, "nombre": "Empanadas", "descripcion": "Empanadas caseras horneadas" }
   },
@@ -125,7 +125,7 @@
     "precio": 1500,
     "descripcion": "Gaseosa Coca-Cola original 500ml",
     "stock": 200,
-    "imagen": "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=600&q=80",
+    "imagen": "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&crop=center&w=500&h=500&q=85",
     "disponible": true,
     "categoria": { "id": 4, "nombre": "Bebidas", "descripcion": "Bebidas frías y calientes" }
   },
@@ -135,7 +135,7 @@
     "precio": 1500,
     "descripcion": "Gaseosa Sprite 500ml",
     "stock": 180,
-    "imagen": "https://images.unsplash.com/photo-1625772299848-391b6a87d7b3?auto=format&fit=crop&w=600&q=80",
+    "imagen": "https://images.unsplash.com/photo-1625772299848-391b6a87d7b3?auto=format&fit=crop&crop=center&w=500&h=500&q=85",
     "disponible": true,
     "categoria": { "id": 4, "nombre": "Bebidas", "descripcion": "Bebidas frías y calientes" }
   },
@@ -145,7 +145,7 @@
     "precio": 1000,
     "descripcion": "Agua mineral sin gas 500ml",
     "stock": 300,
-    "imagen": "https://images.unsplash.com/photo-1548839140-29a749e1bc4e?auto=format&fit=crop&w=600&q=80",
+    "imagen": "https://images.unsplash.com/photo-1548839140-29a749e1bc4e?auto=format&fit=crop&crop=center&w=500&h=500&q=85",
     "disponible": true,
     "categoria": { "id": 4, "nombre": "Bebidas", "descripcion": "Bebidas frías y calientes" }
   },
@@ -155,7 +155,7 @@
     "precio": 2500,
     "descripcion": "Cerveza artesanal rubia 473ml",
     "stock": 100,
-    "imagen": "https://images.unsplash.com/photo-1608270199043-4e3a9689408b?auto=format&fit=crop&w=600&q=80",
+    "imagen": "https://images.unsplash.com/photo-1608270199043-4e3a9689408b?auto=format&fit=crop&crop=center&w=500&h=500&q=85",
     "disponible": true,
     "categoria": { "id": 4, "nombre": "Bebidas", "descripcion": "Bebidas frías y calientes" }
   },
@@ -165,7 +165,7 @@
     "precio": 2500,
     "descripcion": "Papas fritas bastón crocantes con sal parrillera",
     "stock": 70,
-    "imagen": "https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&w=600&q=80",
+    "imagen": "https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&crop=center&w=500&h=500&q=85",
     "disponible": true,
     "categoria": { "id": 5, "nombre": "Papas Fritas", "descripcion": "Acompañamientos crujientes" }
   },
@@ -175,7 +175,7 @@
     "precio": 3500,
     "descripcion": "Papas fritas bañadas en cheddar y panceta crocante",
     "stock": 50,
-    "imagen": "https://images.unsplash.com/photo-1585109649139-366815a0d713?auto=format&fit=crop&w=600&q=80",
+    "imagen": "https://images.unsplash.com/photo-1585109649139-366815a0d713?auto=format&fit=crop&crop=center&w=500&h=500&q=85",
     "disponible": true,
     "categoria": { "id": 5, "nombre": "Papas Fritas", "descripcion": "Acompañamientos crujientes" }
   },
@@ -185,7 +185,7 @@
     "precio": 2800,
     "descripcion": "Aros de cebolla empanizados, servidos con salsa barbacoa",
     "stock": 40,
-    "imagen": "https://images.unsplash.com/photo-1639024471285-05c28591bd01?auto=format&fit=crop&w=600&q=80",
+    "imagen": "https://images.unsplash.com/photo-1639024471285-05c28591bd01?auto=format&fit=crop&crop=center&w=500&h=500&q=85",
     "disponible": true,
     "categoria": { "id": 5, "nombre": "Papas Fritas", "descripcion": "Acompañamientos crujientes" }
   }
