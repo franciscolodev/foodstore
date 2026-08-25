@@ -175,17 +175,17 @@
     "precio": 3500,
     "descripcion": "Papas fritas bañadas en cheddar y panceta crocante",
     "stock": 50,
-    "imagen": "https://images.unsplash.com/photo-1585109649139-366815a0d713?auto=format&fit=crop&crop=center&w=500&h=500&q=85",
+    "imagen": "public/images/products/papas-cheddar.png",
     "disponible": true,
     "categoria": { "id": 5, "nombre": "Papas Fritas", "descripcion": "Acompañamientos crujientes" }
   },
   {
     "id": 19,
     "nombre": "Aros de Cebolla",
-    "precio": 2800,
+    "precio": 4000,
     "descripcion": "Aros de cebolla empanizados, servidos con salsa barbacoa",
     "stock": 40,
-    "imagen": "https://images.unsplash.com/photo-1639024471285-05c28591bd01?auto=format&fit=crop&crop=center&w=500&h=500&q=85",
+    "imagen": "public/images/products/aros-cebolla.png",
     "disponible": true,
     "categoria": { "id": 5, "nombre": "Papas Fritas", "descripcion": "Acompañamientos crujientes" }
   }
