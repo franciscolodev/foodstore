@@ -25,7 +25,7 @@
     "precio": 5500,
     "descripcion": "Carne 150g, huevo, jamón, queso, lechuga y tomate",
     "stock": 30,
-    "imagen": "/images/products/hamburguesa-completa.jpg",
+    "imagen": "/images/products/hamburguesa-completa.jpeg",
     "disponible": true,
     "categoria": { "id": 1, "nombre": "Hamburguesas", "descripcion": "Hamburguesas artesanales con carne premium" }
   },
@@ -65,7 +65,7 @@
     "precio": 4800,
     "descripcion": "Mozzarella, cebolla caramelizada, jamón y aceitunas",
     "stock": 20,
-    "imagen": "/images/products/pizza-fugazzeta.jpg",
+    "imagen": "/images/products/pizza-fugazzeta.png",
     "disponible": true,
     "categoria": { "id": 2, "nombre": "Pizzas", "descripcion": "Pizzas al horno de barro" }
   },
@@ -85,7 +85,7 @@
     "precio": 1200,
     "descripcion": "Carne picada, cebolla, huevo duro, aceitunas y especias",
     "stock": 100,
-    "imagen": "/images/products/empanada-carne.jpg",
+    "imagen": "/images/products/empanada-carne.jpeg",
     "disponible": true,
     "categoria": { "id": 3, "nombre": "Empanadas", "descripcion": "Empanadas caseras horneadas" }
   },
@@ -115,7 +115,7 @@
     "precio": 1100,
     "descripcion": "Espinaca, acelga, ricota y nuez moscada",
     "stock": 60,
-    "imagen": "/images/products/empanada-verdura.jpg",
+    "imagen": "/images/products/empanada-verdura.jpeg",
     "disponible": true,
     "categoria": { "id": 3, "nombre": "Empanadas", "descripcion": "Empanadas caseras horneadas" }
   },
