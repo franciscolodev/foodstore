@@ -37,6 +37,6 @@ Este módulo constituye el núcleo de persistencia y lógica transaccional del e
 
 ## ⚙️ Instrucciones de Ejecución
 1. Clonar el repositorio.
-2. Abrir el proyecto en IntelliJ IDEA.
+2. Abrir el proyecto en IntelliJ IDEA
 3. Asegurar que las credenciales de la base de datos en `persistence.xml` sean correctas.
 4. Ejecutar la clase `MainParcial.java` haciendo clic derecho ➔ **Run 'MainParcial.main()'**.
