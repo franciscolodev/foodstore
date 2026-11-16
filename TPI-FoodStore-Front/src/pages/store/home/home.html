@@ -10,26 +10,125 @@
         .panel-izquierdo { width: 220px; flex-shrink: 0; }
         .panel-izquierdo h2 { font-size: 0.8rem; text-transform: uppercase; color: #9ca3af; letter-spacing: 1px; margin-bottom: 15px; }
         .panel-izquierdo ul { list-style: none; padding: 0; margin: 0; }
-        .panel-izquierdo li { padding: 10px 15px; border-radius: 20px; cursor: pointer; color: #4b5563; font-size: 0.95rem; margin-bottom: 5px; }
+        .panel-izquierdo li { padding: 10px 15px; border-radius: 20px; cursor: pointer; color: #4b5563; font-size: 0.95rem; margin-bottom: 5px; transition: background 0.2s; }
         .panel-izquierdo li:hover { background-color: #e5e7eb; }
         .panel-izquierdo li.active { background-color: #1b382b; color: white; font-weight: bold; }
 
-        .seccion-principal { flex-grow: 1; }
-        .buscador-redondo { width: 100%; max-width: 350px; padding: 12px 20px; border-radius: 25px; border: 1px solid #d1d5db; font-size: 0.95rem; outline: none; margin-bottom: 35px; background-color: white; }
+        .seccion-principal { flex-grow: 1; min-width: 0; }
+
+        .barra-filtros {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 35px;
+            flex-wrap: wrap;
+        }
+
+        .buscador-redondo { 
+            width: 100%; 
+            max-width: 350px; 
+            padding: 12px 20px; 
+            border-radius: 25px; 
+            border: 1px solid #d1d5db; 
+            font-size: 0.95rem; 
+            outline: none; 
+            background-color: white; 
+        }
+
+        .selector-orden {
+            max-width: 220px;
+            cursor: pointer;
+        }
 
         .cuadrilla-items { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 24px; }
         .tarjeta-plato { background: white; border-radius: 16px; padding: 20px; border: 1px solid #e4e7eb; display: flex; flex-direction: column; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.01); }
-        .tarjeta-plato img { max-width: 140px; height: 140px; object-fit: contain; align-self: center; margin-bottom: 15px; border-radius: 50%; }
+        .tarjeta-plato img { width: 140px; height: 140px; object-fit: cover; align-self: center; margin-bottom: 15px; border-radius: 50%; }
         .tarjeta-plato .tag-cat { font-size: 0.75rem; color: #9ca3af; text-transform: uppercase; font-weight: bold; margin-bottom: 5px; }
         .tarjeta-plato h4 { margin: 5px 0; font-size: 1.1rem; color: #111827; font-weight: 600; }
         .tarjeta-plato p { font-size: 0.85rem; color: #6b7280; line-height: 1.4; margin: 0 0 20px 0; flex-grow: 1; }
         
-        .fila-compra { display: flex; justify-content: space-between; align-items: center; margin-top: auto; }
+        .fila-compra { display: flex; justify-content: space-between; align-items: center; margin-top: auto; gap: 8px; }
         .fila-compra .precio { font-size: 1.15rem; font-weight: 700; color: #111827; }
         
         .btn-comprar { background-color: #1b382b; color: white; border: none; padding: 8px 18px; border-radius: 20px; cursor: pointer; font-weight: 600; font-size: 0.85rem; transition: background 0.2s; }
         .btn-comprar:hover { background-color: #142a20; }
         .btn-bloqueado { background-color: #e5e7eb; color: #9ca3af; border: none; padding: 8px 18px; border-radius: 20px; cursor: not-allowed; font-size: 0.85rem; }
+
+        /* === RESPONSIVE TIENDA === */
+        @media (max-width: 992px) {
+            .layout-tienda {
+                padding: 20px 24px;
+                gap: 24px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .layout-tienda {
+                flex-direction: column;
+                padding: 16px;
+                gap: 16px;
+            }
+
+            .panel-izquierdo {
+                width: 100%;
+            }
+
+            .panel-izquierdo h2 {
+                margin-bottom: 10px;
+            }
+
+            .panel-izquierdo ul {
+                display: flex;
+                overflow-x: auto;
+                gap: 8px;
+                padding-bottom: 6px;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .panel-izquierdo li {
+                white-space: nowrap;
+                margin-bottom: 0;
+                background-color: white;
+                border: 1px solid #e4e7eb;
+                flex-shrink: 0;
+            }
+
+            .panel-izquierdo li.active {
+                border-color: #1b382b;
+            }
+
+            .barra-filtros {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 10px;
+                margin-bottom: 20px;
+            }
+
+            .buscador-redondo,
+            .selector-orden {
+                max-width: 100%;
+            }
+
+            .cuadrilla-items {
+                grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+                gap: 14px;
+            }
+
+            .tarjeta-plato {
+                padding: 14px;
+            }
+
+            .tarjeta-plato img {
+                width: 110px;
+                height: 110px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .cuadrilla-items {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
@@ -51,10 +150,10 @@
         </aside>
 
         <main class="seccion-principal">
-            <div style="display: flex; align-items: center;">
+            <div class="barra-filtros">
                 <input type="text" id="campo-busqueda" class="buscador-redondo" placeholder="🔍 Buscar productos...">
                 
-                <select id="selector-ordenamiento" class="buscador-redondo" style="max-width: 200px; margin-left: 15px; cursor: pointer; margin-bottom: 35px;">
+                <select id="selector-ordenamiento" class="buscador-redondo selector-orden">
                     <option value="default">Ordenar por...</option>
                     <option value="az">Nombre: A - Z</option>
                     <option value="za">Nombre: Z - A</option>
